@@ -48,7 +48,7 @@ Users should be able to:
 ### Links
 
 * Solution URL: [https://github.com/beyond-real/conference-ticket-generator-main](https://github.com/beyond-real/conference-ticket-generator-main)
-* Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+* Live Site URL: [Conference-ticket-generator](https://beyond-real.github.io/conference-ticket-generator-main/)
 
 ## My process
 
