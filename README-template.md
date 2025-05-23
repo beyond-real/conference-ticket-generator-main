@@ -1,22 +1,26 @@
-# Frontend Mentor - Conference ticket generator solution
+Here’s a clean, final version of your `README.md` tailored for your project, including your learnings and deleting all the placeholder notes as requested:
 
-This is a solution to the [Conference ticket generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+---
+
+# Frontend Mentor - Conference Ticket Generator Solution
+
+This is a solution to the [Conference Ticket Generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+* [Overview](#overview)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+  * [The challenge](#the-challenge)
+  * [Screenshot](#screenshot)
+  * [Links](#links)
+* [My process](#my-process)
+
+  * [Built with](#built-with)
+  * [What I learned](#what-i-learned)
+  * [Continued development](#continued-development)
+  * [Useful resources](#useful-resources)
+* [Author](#author)
+* [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -24,96 +28,94 @@ This is a solution to the [Conference ticket generator challenge on Frontend Men
 
 Users should be able to:
 
-- Complete the form with their details
-- Receive form validation messages if:
-  - Any field is missed
-  - The email address is not formatted correctly
-  - The avatar upload is too big or the wrong image format
-- Complete the form only using their keyboard
-- Have inputs, form field hints, and error messages announced on their screen reader
-- See the generated conference ticket when they successfully submit the form
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+* Complete the form with their details
+* Receive form validation messages if:
+
+  * Any field is missed
+  * The email address is not formatted correctly
+  * The avatar upload is too big or the wrong image format
+* Complete the form only using their keyboard
+* Have inputs, form field hints, and error messages announced on their screen reader
+* See the generated conference ticket when they successfully submit the form
+* View the optimal layout for the interface depending on their device's screen size
+* See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot of the Conference Ticket Generator](./assets/images/screenshot.png)
+![Screenshot of the Conference Form](./assets/images/screenshot2.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+* Solution URL: [https://github.com/beyond-real/conference-ticket-generator-main](https://github.com/beyond-real/conference-ticket-generator-main)
+* Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+* Semantic HTML5
+* CSS custom properties
+* Flexbox
+* Mobile-first responsive design
+* Vanilla JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped me strengthen my understanding of:
 
-To see how you can add code snippets, see below:
+* **Passing data between JavaScript files** using export/import modules.
+* **Base64 encoding**, especially how to convert uploaded images into base64 for inline ticket previews.
+* **Form validation** with custom error messages.
+* **Clearing input errors dynamically** on user correction (real-time feedback).
+* **Handling file uploads** and validating file type and size.
+* **Creating of random ticket ID** using incrementing numbers
+* **Using padStart**
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Example: handling image preview and base64 conversion
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+function toBase64(file) {
+  // create promise since its an async function
+  return new Promise((resolve, reject) => {
+
+    // use FileReader browser api
+    const reader = new FileReader();
+
+    // read the file and coverts it to base64
+    reader.readAsDataURL(file);
+
+    // when successfully read, this resolves the promise 
+    reader.onload = () => resolve(reader.result);
+
+    // rejects promise in case of error
+    reader.onerror = (error) => reject(error);
+  });
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I want to:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+* Explore better ways to validate forms using libraries like Yup or Validator.js.
+* Handle error messages in a more accessible way for screen readers.
+* Practice generating and downloading final ticket designs as images or PDFs.
+* Implement drag-and-drop for image upload.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+* [MDN Web Docs - FileReader API](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
+* [JavaScript Form Validation Guide](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+* [Convert Images to Base64](https://codebeautify.org/image-to-base64-converter)
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+* GitHub - [@CleopasMMuchiri](https://github.com/CleopasMMuchiri)
+* Frontend Mentor - [@CleopasMMuchiri](https://www.frontendmentor.io/profile/CleopasMMuchiri)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+Thanks to the Frontend Mentor community and the contributors of the base challenge for helping sharpen real-world form handling skills. Much appreciation to those on GitHub who reviewed and inspired improvements.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+---
