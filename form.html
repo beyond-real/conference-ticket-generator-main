@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="drop-area.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Conference ticket generator</title>
+  </head>
+  <body>
+    <!-- Form starts -->
+
+    <main>
+      <section class="form-section">
+        <div class="header">
+          <img src="./assets/images/logo-full.svg" alt="" />
+
+          <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+
+          <p class="header-text">
+            Secure your spot at next year's biggest coding conference.
+          </p>
+        </div>
+
+        <form
+          action="
+   "
+        >
+          <p class="label">Upload avator</p>
+          <div for="input-file" class="drop-area">
+            <label for="input-file" id="drop-area">
+              <input
+                placeholder=""
+                type="file"
+                accept="img/*"
+                id="input-file"
+                hidden
+              />
+              <div id="img-view">
+                <div class="img-div" id="img-div">
+                  <img src="./assets/images/icon-upload.svg" alt="" />
+                </div>
+                <p>Drag and drop or click to upload</p>
+              </div>
+            </label>
+          </div>
+
+          <p class="upload-info">
+            <img src="./assets/images/icon-info.svg" alt="" />
+            <span class="file-errors"
+              >Upload your photo (JPG or PNG, max size: 500KB).</span
+            >
+          </p>
+
+          <div class="inputs">
+            <label for="full-name">Full Name</label>
+            <input
+              id="full-name"
+              name="full-name"
+              placeholder="John Doe"
+              type="text"
+            />
+            <span class="errors name-errors"></span>
+          </div>
+
+          <div class="inputs">
+            <label for="email">Email Address</label>
+            <input id="email" placeholder="example@email.com" type="email" />
+            <span class="errors email-errors"></span>
+          </div>
+
+          <div class="inputs">
+            <label for="github-username">GitHub Username</label>
+            <input
+              name="github-username"
+              placeholder=" @yourusername"
+              type="text"
+              id="github-username"
+            />
+            <span class="errors github-errors"></span>
+          </div>
+
+          <button id="generate-btn" class="submit-button" type="submit">
+            Generate My Ticket
+          </button>
+        </form>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+    <img class="circle" src="./assets/images/pattern-circle.svg" alt="circle" />
+    <img
+      class="circle-2"
+      src="./assets/images/pattern-circle.svg"
+      alt="circle"
+    />
+    <img class="lines" src="./assets/images/pattern-lines.svg" alt="lines" />
+    <img class="top-line" src="./assets/images/pattern-squiggly-line-top.svg" alt="" />
+    <img class="bottom-line-mobile"
+      src="./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt=""
+    />
+    <img class="bottom-line-desktop"
+      src="./assets/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt=""
+    />
+    <script src="./scripts/form.js"></script>
+  </body>
+</html>
